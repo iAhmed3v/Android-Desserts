@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AndroidDesserts</string>
+    <string name="intro_text">Droid Desserts</string>
+    <string name="donut_description">Donuts are glazed and sprinkled with candy.</string>
+    <string name="froyo_description">FroYo is premium self-serve frozen yogurt.</string>
+    <string name="ice_cream_description">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
+    <string name="floating_button_desc">floating button</string>
+
+    <string name="donut_order_toast">You ordered a donut.</string>
+    <string name="ice_cream_order_toast">You ordered an ice cream sandwich.</string>
+    <string name="froyo_order_toast">You ordered a FroYo.</string>
+</resources>
