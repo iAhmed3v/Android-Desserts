@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Order  Info"
+        android:text="@string/order_info_text"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Name"
-        android:textSize="20sp"
+        android:text="@string/name_text"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/order_text_view" />
 
@@ -33,12 +33,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter Your Name"
+        android:hint="@string/name_hint"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/name_text_view"
-        app:layout_constraintBaseline_toBaselineOf="@id/name_text_view"/>
+        android:theme="@style/CustomTheme"
+        android:textColorHighlight="@color/purple_200"
+        app:layout_constraintBaseline_toBaselineOf="@id/name_text_view"
+        app:layout_constraintStart_toEndOf="@+id/name_text_view" />
 
 
     <TextView
@@ -47,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Address"
-        android:textSize="20sp"
+        android:text="@string/address_text"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
 
@@ -59,8 +60,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter Your Address"
+        android:hint="@string/address_hint"
         android:inputType="textMultiLine"
+        android:theme="@style/CustomTheme"
         app:layout_constraintStart_toEndOf="@+id/address_text_view"
         app:layout_constraintBaseline_toBaselineOf="@id/address_text_view"/>
 
@@ -70,24 +72,99 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="46dp"
-        android:text="Phone"
+        android:text="@string/phone_text"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/address_text_view" />
 
     <EditText
         android:id="@+id/phone_edit_text"
-        android:layout_width="217dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:hint="Enter Your Phone Number"
+        android:hint="@string/phone_number_hint"
         android:inputType="phone"
+        android:theme="@style/CustomTheme"
         app:layout_constraintBaseline_toBaselineOf="@id/phone_text_view"
         app:layout_constraintStart_toEndOf="@+id/phone_text_view" />
 
 
-    
+    <TextView
+        android:id="@+id/note_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:text="@string/note_text"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text_view" />
+
+    <EditText
+        android:id="@+id/note_edit_text"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/note_hint"
+        android:inputType="textCapSentences"
+        android:theme="@style/CustomTheme"
+        app:layout_constraintBaseline_toBaselineOf="@id/note_text_view"
+        app:layout_constraintStart_toEndOf="@+id/note_text_view" />
 
 
+    <TextView
+        android:id="@+id/delivery_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/choose_delivery_text"
+        android:textSize="20sp"
+        android:theme="@style/CustomTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_edit_text" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delivery_text_view">
+
+        <RadioButton
+            android:id="@+id/standard_delivery_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/standard_delivery_text" />
+
+        <RadioButton
+            android:id="@+id/fast_delivery_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/fast_delivery_text" />
+
+        <RadioButton
+            android:id="@+id/pickup_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/pick_up_text" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/address_edit_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidDesserts</string>
+    <string name="app_name">Android Desserts</string>
     <string name="intro_text">Droid Desserts</string>
     <string name="donut_description">Donuts are glazed and sprinkled with candy.</string>
     <string name="froyo_description">FroYo is premium self-serve frozen yogurt.</string>
@@ -9,4 +9,27 @@
     <string name="donut_order_toast">You ordered a donut.</string>
     <string name="ice_cream_order_toast">You ordered an ice cream sandwich.</string>
     <string name="froyo_order_toast">You ordered a FroYo.</string>
+    <string name="order_info_text">Order Info</string>
+    <string name="name_text">Name</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="address_text">Address</string>
+    <string name="address_hint">Enter Your Address</string>
+    <string name="phone_text">Phone</string>
+    <string name="phone_number_hint">Enter Your Phone</string>
+    <string name="note_text">Note:</string>
+    <string name="note_hint">Enter Your Note</string>
+    <string name="choose_delivery_text">Choose a delivery method:</string>
+    <string name="standard_delivery_text">Standard delivery</string>
+    <string name="fast_delivery_text">Fast delivery</string>
+    <string name="pick_up_text">Pick up</string>
+    <string name="standard_delivery_toast">Standard delivery</string>
+    <string name="fast_delivery_toast">Fast delivery</string>
+    <string name="pick_up_toast">Pick up</string>
+
+    <string-array name="spinner_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
 </resources>
