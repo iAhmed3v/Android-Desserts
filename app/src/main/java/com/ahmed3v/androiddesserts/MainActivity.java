@@ -16,12 +16,16 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "TAG";
     private ImageView donutImage, froyoImage, iceCreamImage;
     private FloatingActionButton fab;
     private Toolbar toolbar;
+
+    private String mOrderMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_orders:
-                Toast.makeText(this , R.string.action_order_toast, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                startActivity(intent);
                 return true;
 
             case R.id.action_status:
