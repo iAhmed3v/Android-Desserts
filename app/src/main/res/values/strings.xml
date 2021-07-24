@@ -32,4 +32,13 @@
         <item>Mobile</item>
         <item>Other</item>
     </string-array>
+
+    <string name="action_order_toast">You selected Order.</string>
+    <string name="action_status_toast">You selected Status.</string>
+    <string name="action_favorites_toast">You selected Favorites.</string>
+    <string name="action_contact_toast">You selected Contact.</string>
+    <string name="contact_item_text">Contact</string>
+    <string name="orders_item_text">Orders</string>
+    <string name="status_item_text">Status</string>
+    <string name="favorites_item_text">Favorites</string>
 </resources>

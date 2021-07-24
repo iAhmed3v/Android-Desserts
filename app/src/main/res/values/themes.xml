@@ -14,6 +14,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- No Action Bar Theme.-->
+    <style name="Theme.AndroidDesserts.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="CustomTheme">
         <item name="colorControlActivated">@color/purple_200</item>
         <item name="colorControlHighlight">@color/purple_200</item>
